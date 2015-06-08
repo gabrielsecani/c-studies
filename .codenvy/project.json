@@ -1,0 +1,1 @@
+{"mixinTypes":[],"builders":{"configs":{}},"runners":{"configs":{"project:/ENV1-C-studies":{"ram":200,"variables":{"configurationType":"cpp"},"options":{}}},"default":"project:/ENV1-C-studies"},"description":"Studies for C classroom","type":"cpp","attributes":{"language":["cpp"]}}
