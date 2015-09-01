@@ -2,17 +2,15 @@
 #include<stdlib.h>
 #include<string.h>
 
-#if !defined(NULL)
-    #define NULL ((void*)0)
-#endif
-
-typedef struct no{
+struct no{
     int dado;
     struct no *prox;
-    } *tipopilha;
+    };
 
-void init(tipopilha *topo){
-    *topo = NULL;
+typedef struct no *tipopilha;
+
+void init(tipopilha topo){
+    topo = NULL;
 }
 
 void push(tipopilha *topo, int elem){
@@ -23,7 +21,7 @@ void push(tipopilha *topo, int elem){
         novo->prox = *topo;
         *topo = novo;
     }else{
-        printf("Pilha está cheia.\n");
+        printf("Pilha está vazia.\n");
     }
 }
 
@@ -42,7 +40,7 @@ int pop(tipopilha *topo, int *elem){
         free(aux);
         return 1;
     }else{
-        printf("Pilha está cheia.\n");
+        printf("Pilha está vazia.\n");
         return 0;
     }
 }
@@ -52,14 +50,14 @@ int top(tipopilha *topo, int *elem){
         *elem = (*topo)->dado;
         return 1;
     }else{
-        printf("Pilha está cheia.\n");
+        printf("Pilha está vazia.\n");
         return 0;
     }
 }
 
 int main(){
-    tipopilha *topo;
+    tipopilha topo;
     init(topo);
-    //printf("%d", isEmpty(NULL));
+    printf("%d", isEmpty(NULL));
     getchar();
 }

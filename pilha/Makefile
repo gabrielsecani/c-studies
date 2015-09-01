@@ -1,12 +1,14 @@
+$options="-xc -Wno-deprecated-declarations ";
+
 all: clear	clean pilhaencadeada
 	echo Done.
 
 pilhaencadeada: pilhaencadeada.o
-	gcc -xc -o pilhaencadeada pilhaencadeada.o
+	gcc -o pilhaencadeada pilhaencadeada.o
 	./pilhaencadeada
 
 pilhaencadeada.o:
-	gcc -xc -o pilhaencadeada.o -c pilhaencadeada.c -Wno-deprecated-declarations 
+	gcc -o pilhaencadeada.o -c pilhaencadeada.c 
 
 clear:
 	clear screen
