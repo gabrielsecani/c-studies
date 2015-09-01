@@ -13,4 +13,4 @@ resolucao_parte2_NACSIS.o:
 
 clean:
 	rm -f *.o resolucao_parte2_NACSIS
-	echo Clear!
+	#Clear!
